@@ -18,14 +18,12 @@
     <!--HandlerAdapter-->
     <bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter"></bean>
     <!--设置注解类所在包,dispatcherservlet只关注@controller注解,忽略其他bean-->
-    <context:component-scan base-package="com.xks.photos.web.controller">
+    <context:component-scan base-package="com.xks.photos.web">
         <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
     </context:component-scan>
     <!--静态资源处理-->
 <!--静态资源文件地址出问题-->
     <!--静态资源访问-->
-
-
 
     <!--spring mvc的模板文件-->
     <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
